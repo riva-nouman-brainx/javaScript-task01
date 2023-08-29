@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const alphaNumeric = /^(?![0-9])[a-zA-Z0-9]+$/;
         if(fname.length==0){
             validateMessage.innerHTML = "Don't leave the field empty";
+            updateSubmitButton();
         }
         else{
             if (fname.match(alphaNumeric)) {
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById("first-name").style.borderColor = "red";
                 validateMessage.innerHTML = "Invalid Entry";
                 fnameVal=false;
+                updateSubmitButton();
             }
         }
     }
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const alphaNumeric = /^(?![0-9])[a-zA-Z0-9]+$/;
         if(fname==""){
             validateMessage.innerHTML = "Don't leave the field empty";
+            updateSubmitButton();
         }
         else if (fname.match(alphaNumeric)) {
             validateMessage.innerHTML = "";
@@ -42,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("last-name").style.borderColor = "red";
             validateMessage.innerHTML = "Invalid Entry";
             lnameVal=false;
+            updateSubmitButton();
         }
     }
     var passwordVal=false;
@@ -53,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if(password==""){
             validateMessage.innerHTML = "Don't leave the field empty";
             passwordVal=false;
+            updateSubmitButton();
         }
         else if(password.match(passwordRegex)){
             validateMessage.innerHTML = "";
@@ -64,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("password").style.borderColor = "red";
             validateMessage.innerHTML = "Password must be at least 8 characters with alphanumeric values and at least one upper and one lower case character ";
             passwordVal=false;
+            updateSubmitButton();
         }
     }
     var confirmVal=false;
@@ -75,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if(confirmPass===""){
             validateMessage.innerHTML = "Don't leave the field empty";
             confirmVal=false;
+            updateSubmitButton();
         }
         else if(password === confirmPass){
             validateMessage.innerHTML = "";
@@ -86,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("confirm-password").style.borderColor = "red";
             validateMessage.innerHTML = "Password doesn't match";
             confirmVal=false;
+            updateSubmitButton();
 
         }
     }
@@ -97,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if(age==""){
             validateMessage.innerHTML = "Don't leave the field empty";
             ageVal=false;
+            updateSubmitButton();
         }
         else if(parseInt(age)>=18 && parseInt(age)<=151){
             validateMessage.innerHTML = "";
@@ -108,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("age").style.borderColor = "red";
             validateMessage.innerHTML = "You don't lie in the age bracket";
             ageVal=false;
+            updateSubmitButton();
         }
     }
     var contactVal=false;
@@ -118,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if(contact==""){
             validateMessage.innerHTML = "Don't leave the field empty";
             contactVal=false;
+            updateSubmitButton();
         }
         else if(contact.length==11){
             validateMessage.innerHTML = "";
@@ -129,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById("contact").style.borderColor = "red";
             validateMessage.innerHTML = "Invalid Phone Number";
             contactVal=false;
+            updateSubmitButton();
         }
     }
     var emailVal=false;
