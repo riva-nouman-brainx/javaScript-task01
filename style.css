@@ -33,6 +33,19 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.input-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.registration-form input,
+.registration-form label,
+.registration-form p {
+    margin: 0;
+    padding: 0;
+}
 
 button {
     background-color: #007bff;
