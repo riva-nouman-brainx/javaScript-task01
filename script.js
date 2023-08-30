@@ -72,6 +72,14 @@ document.addEventListener('DOMContentLoaded', function() {
             updateSubmitButton();
         }
     }
+    function checkPasswordAndConfirm() {
+        checkPassword();
+        confirmPassword();
+    }
+    
+    document.getElementById("password").addEventListener("input", checkPasswordAndConfirm);
+    document.getElementById("confirm-password").addEventListener("input", checkPasswordAndConfirm);
+    
     var confirmVal=false;
     document.getElementById("confirm-password").addEventListener("input", confirmPassword);
     function confirmPassword(event){
